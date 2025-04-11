@@ -14,8 +14,9 @@ $button_color: #807675;
 }
 
 .content {
-    max-width: 1440px;
-    margin: 0 auto;
+    width: 100%;
+    // margin: 0px 63px;
+    padding: 0 63px;
 }
 
 header {
@@ -62,7 +63,6 @@ header {
             display: flex;
             align-items: center;
             gap: 10px;
-            margin-bottom: 10px;
 
             .authors_img {
                 max-width: 50px;
@@ -104,12 +104,19 @@ header {
         .article_detail_initials {
             display: flex;
             align-items: center;
-            gap: 20px;
+            gap: 10px;
 
             .detail_img {
                 max-width: 50px;
                 border-radius: 50%;
+                border: 1px solid $color_black;
             }
+        }
+
+        .article_detail_authors {
+            display: flex; 
+            gap: 20px;
+            flex-wrap: wrap;
         }
     }
 
@@ -172,7 +179,6 @@ header {
     padding: 10px;
 }
 
-
 .article_detail_comments {
     @extend %tpltext_part_one;
     margin-top: 3px;
@@ -194,6 +200,7 @@ header {
     .comment_parent_info, .comment_child_info{
         display: flex;
         justify-content: space-between;
+        padding-left: 35px;
 
         & a {
             color: $link_static_color;
